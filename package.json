@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "build": "NODE_DEV=production gulp build",
+    "clean": "gulp clean"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0"
   },
   "dependencies": {

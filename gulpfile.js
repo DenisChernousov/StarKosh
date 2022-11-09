@@ -4,7 +4,18 @@ const sass = require('gulp-sass')(require('sass'))
 const autoprefixer = require('gulp-autoprefixer')
 const gcssmq = require('gulp-group-css-media-queries')
 const includeFiles = require('gulp-include')
+const imagemin = require('gulp-imagemin')
+// const пгдзша = require('gulp-imagemin')
+const htmlmin = require('gulp-htmlmin')
+const gulpGroupCssMediaQueries = require('gulp-group-css-media-queries')
 const browserSync = require('browser-sync').create()
+
+// const isProduction = process.env.NODE_ENV === 'production';
+const outputDir = 'public';
+const srcHTML = 'src/**/*.html';
+const srcSCSS = 'src/**/*.scss';
+const srcJS = 'src/**/*.js';
+const srcImages = ['src/**/*.svg', 'src/**/*.jpg', 'src/**/*.gif', 'src/**/*.png' ];
 
 function browsersync() {
   browserSync.init({
@@ -21,7 +32,7 @@ function browsersync() {
 }
 
 function styles() {
-  return src('./src/styles/style.scss')
+  return src('./src/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ grid: true }))
     .pipe(gcssmq())
@@ -33,7 +44,7 @@ function scripts() {
   return src('./src/js/script.js')
     .pipe(
       includeFiles({
-        includePaths: './src/components/**/',
+        includePaths: './src/**/',
       })
     )
     .pipe(dest('./public/js/'))
@@ -41,12 +52,8 @@ function scripts() {
 }
 
 function pages() {
-  return src('./src/pages/*.html')
-    .pipe(
-      includeFiles({
-        includePaths: './src/components/**/',
-      })
-    )
+  return src('./src/**/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('./public/'))
     .pipe(browserSync.reload({ stream: true, }))
 }
@@ -57,8 +64,10 @@ function copyFonts() {
 }
 
 function copyImages() {
-  return src('./src/images/**/*')
-    .pipe(dest('./public/images/'))
+  return src('./src/img/**/*')
+  // .pipe(gulpif(isProduction, imagemin()))
+    .pipe(imagemin())
+    .pipe(dest('./public/img/'))
 }
 
 async function copyResources() {
@@ -72,11 +81,11 @@ async function clean() {
 
 function watch_dev() {
   watch(['./src/js/script.js', './src/components/**/*.js'], scripts)
-  watch(['./src/styles/style.scss', './src/components/**/*.scss'], styles).on(
+  watch(('./src/**/*.scss'), styles).on(
     'change',
     browserSync.reload
   )
-  watch(['./src/pages/*.html', './src/components/**/*.html'], pages).on(
+  watch(('./src/**/*.html'), pages).on(
     'change',
     browserSync.reload
   )
