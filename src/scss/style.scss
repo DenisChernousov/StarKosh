@@ -11,19 +11,24 @@ body {
   font-weight: 400;
   color: rgb(0, 0, 0);
   background-color: #3d3c3c;
+  background-image: url(../img/bg-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 a {
   text-decoration: none;
 }
 
-.container {
-  padding: 0.6rem;
-  max-width: 77.6rem;
-  margin: 0 auto;
-}
+
 
 .header {
+  &__container {
+    padding: 0.6rem;
+    max-width: 77.6rem;
+    margin: 0 auto;
+  }
+
   &__inner {
     margin-top: 6.6rem;
     background-color: #333;
@@ -56,21 +61,32 @@ a {
     margin-left: 24rem;
     background-color: transparent;
     z-index: 11;
+
+    a {
+      color: #fff;
+    }
   }
 
+  &__link {
+    a {
+      color: #fff;
+    }
+  }
 }
 
 .header__inner {
   position: relative;
-  background: linear-gradient(334deg, rgb(0 0 0 / 0%) 10%, rgb(0 0 0 / 74%) 100%);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(51px) brightness(115%);
 }
 
 .header__img {
   position: absolute;
-  top: -7.2rem;
-  left: 23.9rem;
-  border-radius: 2.5rem;
-  z-index: 1;
+  top: 6.6rem;
+  left: 38.68rem;
+  border-bottom-right-radius: 2.5rem;
+  z-index: 5;
+  width: 37.5rem;
 }
 
 .logo {
@@ -98,6 +114,14 @@ a {
     font-size: 15.6rem;
     line-height: 26.5rem;
     color: #FFFFFF;
+  }
+
+  &__star {
+    position: absolute;
+    top: 19rem;
+    left: 32.9rem;
+    width: 7.3rem;
+    height: 5.5rem;
   }
 
   &__letter {
@@ -152,24 +176,22 @@ a {
 
 .btn {
   margin-top: 33px;
+
 }
 
 .header__btn {
-  width: 231px;
-  height: 56px;
+  width: 14.4rem;
+  height: 3.5rem;
 
-  padding: 9px 19px;
-  background: linear-gradient(180deg, rgba(186, 186, 186, 0.098) 0%, rgba(240, 240, 240, 0) 100%);
-  border-radius: 10px;
+  padding: 0.6rem 1.9rem;
+  background: linear-gradient(180deg, rgb(255 255 255 / 35%) 15%, rgb(0 0 0 / 14%) 90%);
+  border-radius: 0.6rem;
   font-family: 'Roboto';
-  border: 5px solid transparent;
-  border-image: linear-gradient(358deg, rgb(154 154 154 / 100%) 100%, rgb(119 119 119 / 21%) 100%));
-  border-image-slice: 1;
-
+  // border: 0.2rem solid #333;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   text-transform: uppercase;
   color: #FFFFFF // transform: matrix(1, 0, 0, -1, 0, 0);
 }
