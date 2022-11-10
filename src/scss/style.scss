@@ -6,11 +6,11 @@
 // @import '../components/header';
 
 body {
-  font-family: "Inter";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   color: rgb(0, 0, 0);
-  background-color: #fedb03;
+  background-color: #3d3c3c;
 }
 
 a {
@@ -21,4 +21,155 @@ a {
   padding: 0.6rem;
   max-width: 77.6rem;
   margin: 0 auto;
+}
+
+.header {
+  &__inner {
+    margin-top: 6.6rem;
+    background-color: #333;
+    border-radius: 2.5rem;
+    border: 3px solid #fff;
+    height: 42.4rem;
+  }
+}
+
+.menu {
+  margin-top: 1.6rem;
+  padding-left: 4.6rem;
+  padding-right: 3.8rem;
+
+  background-color: transparent;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    color: #fff;
+    z-index: 11;
+  }
+
+  &__link-issues {
+    margin-left: 24rem;
+    background-color: transparent;
+    z-index: 11;
+  }
+
+}
+
+.header__inner {
+  position: relative;
+  background: linear-gradient(334deg, rgb(0 0 0 / 0%) 10%, rgb(0 0 0 / 74%) 100%);
+}
+
+.header__img {
+  position: absolute;
+  top: -7.2rem;
+  left: 23.9rem;
+  border-radius: 2.5rem;
+  z-index: 1;
+}
+
+.logo {
+  position: relative;
+
+  &__upper {
+    position: absolute;
+    top: 0rem;
+    left: 2.9rem;
+    font-family: 'MonteCarlo', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.6rem;
+    line-height: 26.5rem;
+    color: #FFFFFF;
+  }
+
+  &__upper-k {
+    position: absolute;
+    top: 6.5rem;
+    left: 8.9rem;
+    font-family: 'MonteCarlo', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.6rem;
+    line-height: 26.5rem;
+    color: #FFFFFF;
+  }
+
+  &__letter {
+    position: absolute;
+    top: -1.5rem;
+    left: 13.9rem;
+    font-family: 'MonteCarlo', cursive;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 340px;
+    color: #FFFFFF;
+  }
+
+  &__letter-kosh {
+    position: absolute;
+    top: 5.5rem;
+    left: 19.9rem;
+    font-family: 'MonteCarlo', cursive;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 340px;
+    color: #FFFFFF;
+  }
+
+  .logo__text {
+    position: absolute;
+    margin-top: 21.4rem;
+    margin-left: 22rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    color: #FFFFFF;
+  }
+
+}
+
+.header__trigger {
+  // display: block;
+  text-align: center;
+  margin-top: 28.9rem;
+  margin-left: -36.4rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #FFFFFF;
+
+}
+
+.btn {
+  margin-top: 33px;
+}
+
+.header__btn {
+  width: 231px;
+  height: 56px;
+
+  padding: 9px 19px;
+  background: linear-gradient(180deg, rgba(186, 186, 186, 0.098) 0%, rgba(240, 240, 240, 0) 100%);
+  border-radius: 10px;
+  font-family: 'Roboto';
+  border: 5px solid transparent;
+  border-image: linear-gradient(358deg, rgb(154 154 154 / 100%) 100%, rgb(119 119 119 / 21%) 100%));
+  border-image-slice: 1;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #FFFFFF // transform: matrix(1, 0, 0, -1, 0, 0);
 }
