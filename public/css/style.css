@@ -81,6 +81,10 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Roboto";
   font-style: normal;
@@ -112,7 +116,7 @@ a {
   margin-top: 6.6rem;
   background-color: #333;
   border-radius: 2.5rem;
-  border: 3px solid #fff;
+  border: 0.2rem solid #fff;
   height: 42.4rem;
 }
 
@@ -143,19 +147,30 @@ a {
 
 .menu__link-issues a {
   color: #fff;
+  opacity: 70%;
 }
 
 .menu__link a {
   color: #fff;
   cursor: pointer;
   z-index: 15;
+  opacity: 70%;
+}
+
+.menu__link a:hover,
+.menu__link-issues a:hover {
+  color: #fff;
+  cursor: pointer;
+  z-index: 15;
+  opacity: 100%;
+  transition: all 0.3s;
 }
 
 .header__inner {
   position: relative;
   background: rgba(0, 0, 0, 0.3);
-  -webkit-backdrop-filter: blur(51px) brightness(115%);
-  backdrop-filter: blur(51px) brightness(115%);
+  -webkit-backdrop-filter: blur(3.2rem) brightness(115%);
+  backdrop-filter: blur(3.2rem) brightness(115%);
   margin-bottom: 10.7rem;
 }
 
@@ -210,8 +225,8 @@ a {
   left: 13.9rem;
   font-family: "MonteCarlo", cursive;
   font-weight: 400;
-  font-size: 200px;
-  line-height: 340px;
+  font-size: 7.7rem;
+  line-height: 21.2rem;
   color: #FFFFFF;
 }
 
@@ -221,8 +236,8 @@ a {
   left: 19.9rem;
   font-family: "MonteCarlo", cursive;
   font-weight: 400;
-  font-size: 200px;
-  line-height: 340px;
+  font-size: 7.7rem;
+  line-height: 21.2rem;
   color: #FFFFFF;
 }
 
@@ -251,7 +266,7 @@ a {
 }
 
 .btn {
-  margin-top: 33px;
+  margin-top: 2rem;
 }
 
 .header__btn {
@@ -366,10 +381,120 @@ a {
   font-size: 1.2rem;
   line-height: 2.5rem;
   color: #FFFFFF;
+  opacity: 70%;
+}
+
+.footer a:hover {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: #FFFFFF;
+  opacity: 100%;
+  transition: all 0.3s;
 }
 
 .footer__social-icon {
   display: flex;
+}
+
+.burger-menu__btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url(../img/menu.svg);
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.3s;
+}
+
+.burger-menu__btn:hover {
+  cursor: pointer;
+}
+
+.burger-menu__btn.open {
+  padding: 0;
+  border: 0;
+  background-image: url(../img/x.svg);
+  height: 1.5rem;
+  width: 1.5rem;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1249px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1085px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1017px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 931px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 865px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 777px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 627px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 547px) {
+  html {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 414px) {
+  html {
+    font-size: 5.3px;
+  }
+}
+
+@media (max-width: 390px) {
+  html {
+    font-size: 4.5px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
