@@ -1,24 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+const MENU_OPEN_CLASS = 'burger-menu__open';
+const CONTROL_OPEN_CLASS = 'burger-menu__control__open';
+const burgerNode = document.querySelector('.burger-menu');
+const burgerControlNode = document.querySelector('.burger-menu__control');
 
-  let burger = document.getElementById('burger');
-  let burgerMenu = document.getElementById('burger-menu');
-
-  burger.addEventListener('click', function () {
-    burger.classList.toggle('open');
-  })
-  
-  burgerMenu.addEventListener('click', function () {
-    burgerMenu.classList.toggle('open');
-  })
-
-})
-/* 
-document.addEventListener('DOMContentLoaded', function () {
-
-
-
-  
-
-}) */
-
-
+burgerControlNode.addEventListener('click', (_event)=>{
+burgerNode.classList.toggle(MENU_OPEN_CLASS);
+  burgerControlNode.classList.toggle(CONTROL_OPEN_CLASS);
+});
