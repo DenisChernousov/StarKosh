@@ -86,7 +86,7 @@
       top: 0;
       padding: 3rem;
       // left: 0;
-      border-radius: 25px;
+      border-radius: 1.6rem;
       background-color: #000;
 
       transition: 0.4s;
@@ -170,17 +170,32 @@
     margin-bottom: 1.8rem;
     align-items: center;
     justify-content: space-between;
-  
+
   }
-    .whatme__title {
-      
-      font-size: 2.9rem;
-      line-height: 2.9remx;
-      color: #FFFFFF;
-      margin-top: 5rem;
-      margin-bottom: 4.4rem;
-      text-align: center;
-    }
+
+  .whatme__title {
+
+    font-size: 2.9rem;
+    line-height: 2.9remx;
+    color: #FFFFFF;
+    margin-top: 5rem;
+    margin-bottom: 4.4rem;
+    text-align: center;
+  }
+
+  .footer__contact,
+  .footer a,
+  .footer__links,
+  .footer__social-title {
+
+    font-size: 2rem;
+  }
+
+  .footer a img,
+  .footer__links img,
+  .footer__social-title img {
+    width: 4rem;
+  }
 }
 
 @media (max-width: 411px) {
