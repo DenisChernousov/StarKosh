@@ -41,7 +41,7 @@ function styles() {
 }
 
 function scripts() {
-  return src('./src/js/script.js')
+  return src('./src/js/*.js')
     .pipe(
       includeFiles({
         includePaths: './src/**/',
